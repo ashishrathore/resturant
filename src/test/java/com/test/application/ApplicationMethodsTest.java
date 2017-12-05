@@ -47,7 +47,7 @@ public class ApplicationMethodsTest {
     public void addNewOrder() {
         // do something
 
-        Client client = new JerseyClientBuilder(RULE.getEnvironment()).build("test client");
+        Client client = new JerseyClientBuilder(RULE.getEnvironment()).build("test client 2");
 
         String putOrderUrl = "http://localhost:%d/putOrder";
         Response putUrlResponse = client.target(
