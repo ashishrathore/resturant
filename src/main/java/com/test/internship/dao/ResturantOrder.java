@@ -6,8 +6,8 @@ public class ResturantOrder {
     private String costumer_name;
     private String item_ordered;
 
-
     public ResturantOrder(int id, String costumer_name, String item_ordered) {
+        super();
         this.id = id;
         this.costumer_name = costumer_name;
         this.item_ordered = item_ordered;
@@ -35,5 +35,17 @@ public class ResturantOrder {
 
     public void setItem_ordered(String item_ordered) {
         this.item_ordered = item_ordered;
+    }
+
+
+    /* dummy constructor
+     otherwise giives error -
+     ! com.fasterxml.jackson.databind.JsonMappingException:
+     Can not construct instance of com.test.internship.dao.ResturantOrder:
+     no suitable constructor found, can not deserialize from Object value
+     (missing default constructor or creator, or perhaps need to add/enable type information?)
+
+    */
+    public ResturantOrder() {
     }
 }
